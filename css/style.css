@@ -1,0 +1,208 @@
+.wrapper{
+        position: relative;
+        overflow: hidden;
+        min-height: 100%;
+        background-color: yellowgreen;
+}
+.backgraund{
+    width: 100%;
+    height: 2080px;
+    background: url(../img/bg.jpeg) ;
+    background-size: contain;
+    width: 20000px;
+    height: 600px;
+}
+.car{
+    position: relative;
+    top: 430px;
+    left: 50px;
+    background: url(../img/main_.png) no-repeat ;
+    background-size: contain;
+    width: 400px;
+    height: 200px;
+    animation: car-ride 9s linear forwards;
+}
+@keyframes car-ride {
+    0% {
+		transform: translate(-200%, 0px);
+	}
+	20%{
+		transform: translate(100px, 0px);
+	}
+	80%{
+		transform: translate(100px, 0px);
+	}
+	100% {
+		transform: translate(15000px, 0px);
+	}
+}
+.car__main{
+	position: absolute;
+	bottom: 24px;
+	width: 100%;
+	left: 0;
+}
+.car__main-wheels{
+    position: absolute;
+    background: url(../img/wheel_.png) no-repeat ;
+    background-size: contain;
+    width: 78px;
+    height: 78px;
+    animation: wheels 8s linear forwards;
+}
+.car__main-wheels:first-child{
+    left: 50px;
+}
+.car__main-wheels:last-child{
+    left: 280px;
+}
+@keyframes wheels{
+    0% {
+		transform: rotate(0deg);
+	}
+	20%{
+		transform: rotate(360deg);
+	}
+	80%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+.text{
+    position: relative;
+    padding: 15px;
+    width: 800px;
+    height: 400px;
+    background-color: black;
+    color: white;
+    border: solid brown 10px;
+}
+.text__item{
+    padding: 15px;
+    border: solid grey 10px;
+    margin-bottom: 20px;
+}
+.item__items{
+    text-align: center;
+}
+.item__items:hover{
+    background-color: aliceblue;
+    color: black;
+    transform:translate(10%, 10%) ;
+    transition: all 0.5s ease 0.5s;
+}
+.item__items-link{
+    position: absolute;
+    left: 50%;
+    padding: 15px;
+    background-color: blue;
+    border: solid green 10px;
+    border-radius: 30%;
+}
+.item__items-link:hover{
+    transform: scale(5);
+    transition: all 0.5s ease 0.5s;
+}
+.item__items-link:hover p {
+    transform: rotate(360deg);
+    transition: all 0.5s linear 0.5s;
+}
+.hiden{
+    margin: 0 auto;
+    position: relative;
+    width: 400px;
+    height: 360px;
+    border: solid 5px blueviolet;
+    transition: all 3s ease 1s;
+}
+.hiden:hover{
+    background-color: brown;
+}
+.hiden__item{
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: all 3s ease 1s;
+}
+.hiden__item img{
+    width: 300px;
+    height: 300px;
+}
+.hiden__item:hover{
+    opacity: 1;
+}
+.title{
+    position: relative;
+    width: 800px;
+    height: 100%;
+    background-color: blue;
+    border: solid green 20px;
+    color: aliceblue;
+}
+.title__item{
+    text-align: center;
+    text-shadow: 3px 3px 2px;
+    animation-name: title;
+    animation: title 1s ease 1s forwards;
+	line-height: 1.5;
+	transform: translate(0px, 50%);
+	opacity: 0;
+}
+
+@keyframes title{
+    0% {
+	}
+	100% {
+		transform: translate(0px, 0%);
+		opacity: 1;
+	}
+}
+.title__text{
+    animation-name: title-text;
+    animation: title-text 3s ease 3s forwards;
+	transform: translate(0px, 0%);
+	opacity: 0;
+}
+@keyframes title-text{
+    0% {
+	}
+	100% {
+		transform: translate(0px, 0%);
+		opacity: 2;
+	}
+}
+.rotate {
+    position: relative;
+    background-color: black;
+    border: solid green 15px;
+    color: whitesmoke;
+    width: 800px;
+    height: 100px;
+    text-align: center;
+    padding: 15px;
+    padding-right: 10px;
+}
+.rotate::before{
+    position: absolute;
+    top: 12px;
+    left: 0;
+    content: "";
+    background-image: url(../img/ukraine.svg);
+    width: 20px;
+    height: 20px;
+    animation-name: rotate;
+    animation: rotate 5s ease 0s infinite;
+}
+@keyframes rotate{
+    0%{
+
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
